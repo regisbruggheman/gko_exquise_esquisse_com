@@ -1,0 +1,104 @@
+$theme-color: #DA5C53;
+$navbar-height-breakpoint: 78px;
+
+@import "theme/variables";
+@import "bootstrap.3.3.5/bootstrap";
+@import "font-awesome-4.0.3/font-awesome";
+@import "theme/throbber";
+@import "theme/navbar";
+@import "theme/footer";
+@import "theme/form";
+@import "theme/carousel";
+@import "theme/portfolio";
+@import "theme/press";
+
+/* FIX FOR IE DEVICE_WIDTH BUG
+-------------------------------------------------- */
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+// Color for the placeholder plugin
+.placeholder {
+  color: $input-color-placeholder;
+}
+.grayscale {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: url(/img/grayscale.svg);
+	filter: gray;
+}
+body {
+  position: relative;
+  background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAPklEQVQYV2O8FRP8n6G+lQEfYLx1+8Z/hsZqBnwKIYpAAI9ChCI8ClEV4VCIqQiLQuyK0BTiVoSkEL8iqEIAxnAu8i2MpHEAAAAASUVORK5CYII=');
+}
+/* FIX FOR GMAP BUG
+-------------------------------------------------- */
+#map-canvas {
+  height: 350px;
+  width: 100%;
+  @include box-sizing(content-box);
+  margin-bottom: $line-height-computed;
+  img {
+    max-width: none;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+.th-thumbnails-full-width {
+  [class^="col-*"],
+  [class*=" col-*"] {
+    margin: 0 0 20px;
+    padding: 8px;
+  }
+}
+/* GLOBAL
+-------------------------------------------------- */
+a, button {
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+}
+
+/* LAYOUT
+-------------------------------------------------- */
+
+#page-wrapper {
+  //min-height: 100%;
+  position: relative;
+}
+
+/* VIDEO
+-------------------------------------------------- */
+
+
+/* PAGE HEADER
+-------------------------------------------------- */
+.page-header {
+  @include clearfix;
+  margin: $navbar-height 0 0 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 0;
+  background-color: #dadbd8;
+  @media (min-width: $grid-float-breakpoint) {
+    margin-top: 78px;
+  }
+}
+.page-title {
+  border-bottom: 6px solid $theme-color;
+  text-transform: uppercase;
+  text-align: right;
+  max-width: 500px;
+  float: right;
+  padding-right: 20px;
+  margin: 0;
+}

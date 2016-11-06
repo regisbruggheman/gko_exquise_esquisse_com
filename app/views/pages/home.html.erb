@@ -1,0 +1,19 @@
+<% 
+  @portfolio ||= site.portfolio
+  @projects ||= site.projects.live
+  @project = @projects.shuffle.sample
+%>
+<div id="project-wrapper">
+  <%= render "throbber" %>
+  <div id="project-container">
+    <%= render "projects/single_project" %>
+  </div>
+</div>
+
+<div id="projects-wrapper">
+  <div class="container">
+    <div class="row projects">
+      <%= render @projects, :as => :project %>
+    </div> 
+  </div>
+</div>
