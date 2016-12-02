@@ -25,7 +25,7 @@ set :password, 'S5dRfWYyrAk5dr' # account password
 set :user, 'juliegau' # account username
 set :dbpassword, '4s/lNLN.RK:K'# database user password
 set :dbuser, 'juliegau_db'# database user name
-set :repository,  "git@github.com:regisbruggheman/gko_exquise_esquisse_com.git" #Github repository  
+set :repository,  "git@github.com:regisbruggheman/gko_exquise_esquisse_com.git" #Github repository
 set :deploy_dir, "/home2/#{user}/ror/staging" #deploy directory
 set :branch, 'master'
 set :stage, 'production'
@@ -111,7 +111,7 @@ namespace :deploy do
     run "ln -nsf #{shared_path}/system #{release_path}/public/system"
     run "chmod 755 #{release_path}/public"
     run "rm -rf /home2/#{user}/public_html/exquise-esquisse.com"
-    run "ln -nsf #{release_path}/public /home/#{user}/public_html/exquise-esquisse.com"
+    run "ln -nsf #{release_path}/public /home2/#{user}/public_html/exquise-esquisse.com"
 
   end
 
