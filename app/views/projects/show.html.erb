@@ -1,1 +1,9 @@
+<% @projects ||= site.projects.live %>
 <%= render "single_project" %>
+<div id="projects-wrapper">
+  <div class="container">
+    <div class="row projects">
+      <%= render @projects, :as => :project %>
+    </div>
+  </div>
+</div>

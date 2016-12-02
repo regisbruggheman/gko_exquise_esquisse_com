@@ -1,7 +1,7 @@
 <%# collection_row_cache(project) do %>
 <article class="col-xs-6 col-sm-6 col-md-4">
   <%#= link_to(project.public_url, :class => "thumbnail #{'active' if project.id == @project.id}", :remote => true) do %>
-  <%= link_to(project.public_url, :class => "thumbnail", :remote => true) do %>
+  <%= link_to(project.public_url, :class => "thumbnail", :remote => false) do %>
     <% if project.thumbnail && !project.thumbnail.video_url.blank? %>
       <div class="thumbnail-vid">
         <div class="embed-responsive embed-responsive-16by9">
@@ -10,8 +10,8 @@
       </div>
     <% elsif project.thumbnail %>
       <%= content_tag(:div, :class => "thumbnail-img") do %>
-        <%= image_tag(project.thumbnail.thumbnail(device_type == :desktop ? "434x325#" : "306x230#").url(), 
-            :alt => project.thumbnail.title, 
+        <%= image_tag(project.thumbnail.thumbnail(device_type == :desktop ? "434x325#" : "306x230#").url(),
+            :alt => project.thumbnail.title,
             :class => "img-responsive") %>
       <% end %>
     <% end %>

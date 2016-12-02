@@ -75,7 +75,20 @@ a, button {
   //min-height: 100%;
   position: relative;
 }
-
+#content-wrapper {
+  padding-top: $line-height-computed;
+  position: relative;
+  min-height: 100%;
+  //border-top: 6px solid $theme-color;
+  background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAPklEQVQYV2O8FRP8n6G+lQEfYLx1+8Z/hsZqBnwKIYpAAI9ChCI8ClEV4VCIqQiLQuyK0BTiVoSkEL8iqEIAxnAu8i2MpHEAAAAASUVORK5CYII=');
+  margin-top: $navbar-height;
+  @media (min-width: $grid-float-breakpoint) {
+    margin-top: $navbar-height-breakpoint;
+  }
+}
+.copy-text {
+  color: $theme-color;
+}
 /* VIDEO
 -------------------------------------------------- */
 
