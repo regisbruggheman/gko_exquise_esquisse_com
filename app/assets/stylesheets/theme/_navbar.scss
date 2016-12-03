@@ -6,6 +6,7 @@
   .nav > li > a {
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 18px;
     letter-spacing: 1px;
     border-bottom: 4px solid transparent;
     @include transition(border-bottom 0.3s ease-in-out);
@@ -35,7 +36,7 @@
   @include navbar-vertical-align(34px);
   margin: 0;
   @media (min-width: $grid-float-breakpoint) {
-    padding: 20px 15px;
+    padding: 16px 15px;
     width: 260px;
   }
 }
